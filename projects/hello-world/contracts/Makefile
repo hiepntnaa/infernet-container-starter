@@ -2,8 +2,8 @@
 .phony: deploy
 
 # anvil's third default address
-sender := 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
-RPC_URL := http://localhost:8545
+sender := 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a(thay bằng private key của bạn)
+RPC_URL := http://localhost:8545(thay bằng RPC từ alchemy)
 
 # deploying the contract
 deploy:
