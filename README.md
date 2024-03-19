@@ -219,6 +219,18 @@ To learn more about on-chain requests, check out the following resources:
 3. [Infernet Nodes Docoumentation](https://docs.ritual.net/infernet/nodes)
 
 
+HƯỚNG DẪN CỦA HIỆP
+Cài đặt yêu cầu hệ thống
+apt update
+apt install docker.io -y
+apt install docker-compose -y
+apt install make -y
+curl -L https://foundry.paradigm.xyz | bash
+	sau đó mở 1 tmux mới rồi nhập lệnh: foundryup
+
+
+
+Dưới đây là hướng dẫn chi tiết về cách triển khai dự án hello-world trên mạng BASE:
 
 Chuẩn bị Ví và Đăng ký với Tổng đại lý (Coordinator):
 
