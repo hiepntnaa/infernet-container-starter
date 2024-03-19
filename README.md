@@ -220,12 +220,19 @@ To learn more about on-chain requests, check out the following resources:
 
 
 HƯỚNG DẪN CỦA HIỆP
+
 Cài đặt yêu cầu hệ thống
+
 apt update
+
 apt install docker.io -y
+
 apt install docker-compose -y
+
 apt install make -y
+
 curl -L https://foundry.paradigm.xyz | bash
+
 	sau đó mở 1 tmux mới rồi nhập lệnh: foundryup
 
 
@@ -247,6 +254,7 @@ Mở tệp config.json trong dự án của bạn và thực hiện các thay đ
 Thay đổi coordinator_address thành 0x8d871ef2826ac9001fb2e33fdd6379b6aabf449c.
 Thay đổi rpc_url thành URL RPC của mạng BASE mà bạn nhận được từ Alchemy.
 Thay đổi private_key thành khóa riêng tư của ví của bạn.
+
 Cấu hình Makefile trong Dự án hello-world/contracts:
 
 Mở tệp Makefile trong thư mục projects/hello-world/contracts và thực hiện các thay đổi sau:
@@ -257,17 +265,30 @@ Thay đổi Địa chỉ Tổng đại lý trong Deploy.s.sol:
 Mở tệp Deploy.s.sol trong thư mục projects/hello-world/contracts/script và thay đổi địa chỉ của tổng đại lý thành 0x8d871ef2826ac9001fb2e33fdd6379b6aabf449c.
 Triển khai Container của bạn:
 
-Di chuyển đến thư mục inferent-container-starter: cd ~/inferent-container-starter.
-Sử dụng lệnh make deploy-container project=hello-world để triển khai container.
-Triển khai Contract:
+Di chuyển đến thư mục inferent-container-starter: 
 
-Mở một tab/command prompt mới.
-Sử dụng lệnh make deploy-contracts project=hello-world để triển khai các contract.
-Kiểm tra các logs để xem địa chỉ của hợp đồng SaysGM đã được triển khai.
-Thay đổi Địa chỉ trong CallContract.s.sol:
+cd ~/inferent-container-starter.
 
-Mở tệp CallContract.s.sol trong thư mục projects/hello-world/contracts/script và thay đổi địa chỉ của SaysGM thành địa chỉ bạn nhận được ở bước trước.
-Gọi hợp đồng của bạn:
+Sử dụng lệnh 
 
-Sử dụng lệnh make call-contract project=hello-world để gọi hợp đồng của bạn.
+make deploy-container project=hello-world 
+
+để triển khai container.
+
+
+Triển khai Contract: Mở một tab/command prompt mới.
+Sử dụng lệnh 
+
+make deploy-contracts project=hello-world 
+
+để triển khai các contract. Kiểm tra các logs để xem địa chỉ của hợp đồng SaysGM đã được triển khai.
+
+Thay đổi Địa chỉ trong CallContract.s.sol: Mở tệp CallContract.s.sol trong thư mục projects/hello-world/contracts/script và thay đổi địa chỉ của SaysGM thành địa chỉ bạn nhận được ở bước trước.
+
+
+Gọi hợp đồng của bạn: Sử dụng lệnh 
+make call-contract project=hello-world 
+
+để gọi hợp đồng của bạn.
+
 Làm theo các bước trên sẽ giúp bạn triển khai dự án hello-world trên mạng BASE thành công. Hãy nhớ thực hiện các thay đổi cần thiết trong tệp config.json, Makefile và các tệp script tương ứng để đảm bảo dự án của bạn hoạt động đúng cách trên mạng BASE.
